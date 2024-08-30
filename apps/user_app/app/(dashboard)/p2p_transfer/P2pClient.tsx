@@ -73,7 +73,7 @@ const P2pClient: React.FC<P2pClientPropsData> = ({ data }) => {
             <h1 className="text-center font-semibold text-lg border-b pb-3 mb-2">
               Recent Transactions
             </h1>
-            {data?.map((x) => (
+            {data?.map((x: any) => (
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="font-medium text-sm">{x.payment}</h2>
