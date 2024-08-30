@@ -20,7 +20,7 @@ export async function payViaNumber(amount: string, phone: string) {
   }
 
   try {
-    await prisma.$transaction(async (prisma) => {
+    await prisma.$transaction(async (prisma: any) => {
       await prisma.$queryRaw`SELECT * FROM "Balance" WHERE "userId" = ${Number(session.user.id)} FOR UPDATE`;
 
       const fromBalance = await prisma.balance.findFirst({
