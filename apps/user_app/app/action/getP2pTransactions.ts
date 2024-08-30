@@ -18,7 +18,7 @@ export async function getP2pTransactions() {
     },
   });
 
-  const modUserP2p = userP2pTransactions.map((x) => {
+  const modUserP2p = userP2pTransactions.map((x: any) => {
     if (x.fromUserId === Number(session.user.id)) {
       return { ...x, payment: "Paid" };
     } else {

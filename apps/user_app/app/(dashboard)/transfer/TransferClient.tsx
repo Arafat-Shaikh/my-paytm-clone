@@ -123,7 +123,7 @@ const TransferClient: React.FC<TransferClientProps> = ({
             ) : (
               <div className=" max-h-[240px] overflow-y-auto px-4 py-4">
                 <div className="flex flex-col gap-y-1 my-4 justify-center items-center">
-                  {onRampTransactions.map((t, idx) => (
+                  {onRampTransactions.map((t: any, idx) => (
                     <div
                       key={idx}
                       className="flex justify-between items-center w-full"

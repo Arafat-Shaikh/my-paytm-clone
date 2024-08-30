@@ -11,7 +11,7 @@ export default async function getTransactions() {
     },
   });
 
-  return transactions.map((t) => {
+  return transactions.map((t: any) => {
     return {
       amount: t.amount,
       provider: t.provider,
