@@ -29,7 +29,7 @@ export async function payViaNumber(amount: string, phone: string) {
         },
       });
 
-      console.log("log before checking balance");
+      console.log("log before checking balance and artificial balance");
       await new Promise((resolve) => setTimeout(resolve, 4000));
 
       if (!fromBalance?.amount || !(fromBalance?.amount >= Number(amount))) {
